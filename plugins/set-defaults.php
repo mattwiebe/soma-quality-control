@@ -32,7 +32,7 @@ function sd_set_qc_defaults() {
 		$post = array(
 			'post_status' => 'publish',
 			'post_type' => 'page',
-			'post_content' => 'Add a Ticket Below',
+			'post_content' => 'You must be logged in to create a ticket.',
 			'post_title' => 'Create Ticket'
 		);
 		$page_id = wp_insert_post($post);
