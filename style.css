@@ -179,18 +179,41 @@ a:link, a:active, a:visited,
 #container {
 	width:auto;
 }
-#main {
-	margin:10px;
+#content {
+	overflow:visible;
+	position:relative;
 }
-#sidebar, .tagline {
+#main {
+	margin:6px;
+}
+.tabber {
+	float:none;
+}
+.tagline, #sidebar > .submenu > li:nth-child(n+2) {
 	display:none;
+}
+.submenu li {
+	border-bottom-width:0;
+	margin:0;
+	padding:0;
+}
+#sidebar {
+	float:none;
+	width:auto;
+	margin:24px 6px 6px;
 }
 #logged-in {
 	font-size:9px;
 }
+#top {
+	padding:6px 0;
+	margin:0 6px;
+}
 #branding {
-	background:none;
-	padding:0;
+	-webkit-background-size:24px;
+	background-position:0 0;
+	padding:2px 0 6px 28px;
+	margin:0 6px;
 }
 #site-title {
 	font-size:1.2em;
@@ -242,5 +265,14 @@ a:link, a:active, a:visited,
 .tabber-navigation li a {
 	padding:4px 8px;
 }
+#footer {
+	margin:20px 0;
+	padding:0 6px;
+}
+
+#searchform #s {
+	width:90%;
+}
+
 
 }
