@@ -1,0 +1,105 @@
+/*
+Theme Name: Soma Quality Control
+Theme URI: 
+Description: A custom theme based on Quality Control
+Version: 0.1
+Author: Soma Design
+Author URI: http://somadesign.ca/
+Template: quality-control
+
+*/
+
+@import url('../quality-control/style.css');
+
+/*===== Colors =====*/
+body {
+	background-color:#f9f9f9;
+}
+#site-title {
+	color:#c0272d;
+}
+.ticket-meta {
+	color:#555;
+}
+.entry, .reply {
+	color:#333;
+}
+.update-list .title,
+.ticket-author {
+	color:#888;
+}
+.submenu a small, .tagline {
+	color:#aaa;
+}
+.tabber-navigation ul ul.children a span {
+	background-color:#999;
+	color:#fff;
+}
+
+
+/* Links */
+#site-title a {
+	color:#777;
+}
+.submenu a:link, .submenu a:visited {
+	color:#444;
+}
+.ticket-title,
+.ticket-list .ticket-title a,
+a:link, a:active, a:visited,
+.submenu a:hover, .submenu a:focus {
+	color:#c0272d;
+}
+
+.tabber-navigation, #searchform {
+	background-color:#555;
+	background-image:-moz-linear-gradient(top, rgba(255,255,255,.2), transparent);
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,.2)), to(transparent));
+	background-image:linear-gradient(top, rgba(255,255,255,.2), transparent);
+}
+
+/* Ticket States */
+.ticket-status {
+	color:#fff !important;
+	background-image:-moz-linear-gradient(top, rgba(255,255,255,.2), transparent);
+	background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,.2)), to(transparent));
+	background-image:linear-gradient(top, rgba(255,255,255,.2), transparent);
+	background-color:#bbb;
+}
+.ticket-status.new {
+	background-color:#59a652;
+}
+.ticket-status.in-progress {
+	background-color:#b86437;
+}
+.ticket-status.declined {
+	background-color:#ddd;
+}
+.ticket-status.pending-signoff {
+	background-color:#b8a35d;
+}
+.ticket-status.complete {
+	background-color:#5479a6;
+}
+
+
+/*===== Header =====*/
+#top {
+	padding:10px 40px;
+}
+#branding {
+	padding:12px 0 24px 60px;
+	background-image:url(img/logo.png);
+	background-position:0 12px;
+}
+
+/*===== Boxen =====*/
+.tabber {
+	-moz-box-shadow:1px 3px 5px rgba(0,0,0,.15);
+	-webkit-box-shadow:1px 3px 5px rgba(0,0,0,.15);
+	box-shadow:1px 3px 5px rgba(0,0,0,.15);
+}
+#content {
+	padding-bottom:10px;
+}
+
