@@ -174,14 +174,73 @@ a:link, a:active, a:visited,
 
 
 /*===== Mobile =====*/
+@media screen and ( max-device-width: 640px ) {
+
 #container {
 	width:auto;
 }
 #main {
 	margin:10px;
 }
-#sidebar {
+#sidebar, .tagline {
 	display:none;
 }
+#logged-in {
+	font-size:9px;
+}
+#branding {
+	background:none;
+	padding:0;
+}
+#site-title {
+	font-size:1.2em;
+}
+#respond {
+	padding:1em 0;
+}
+#respond legend, #respond p {
+	margin-left:1em;
+	margin-right:1em;
+}
+#respond input[type="text"], #respond textarea, #respond select {
+	width:100%;
+}
+.ticket-meta li {
+	float:none;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:1em;
+	padding-right:1em;
+}
+.ticket-meta {
+	padding:.5em 0;
+}
+.ticket-meta li:nth-child(4), .ticket-meta li:first-child {
+	display:none;
+}
+.ticket-meta li:last-child {
+	margin-right:0;
+	padding-right:0;
+	border-right-width:0;
+}
+.ticket-list .ticket-author {
+	font-size:10px;
+	max-width:50%;
+	text-align:right;
+	margin:-6px 0 0;
+}
+.ticket-status {
+	min-width:auto;
+	font-size:10px;
+	padding:.33em .67em;
+	margin:-6px 0 3px -6px;
+}
+.ticket-title {
+	display:block;
+	margin:0;
+}
+.tabber-navigation li a {
+	padding:4px 8px;
+}
 
-
+}
