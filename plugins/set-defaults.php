@@ -33,7 +33,7 @@ function sd_set_qc_defaults() {
 			'post_status' => 'publish',
 			'post_type' => 'page',
 			'post_content' => 'You must be logged in to create a ticket.',
-			'post_title' => 'Create Ticket'
+			'post_title' => 'New Ticket'
 		);
 		$page_id = wp_insert_post($post);
 		if ( ! is_wp_error($page_id) ) {
