@@ -160,6 +160,9 @@ a:link, a:active, a:visited,
 #respond textarea {
 	line-height:1.3;
 }
+#respond fieldset {
+	padding-top:12px;
+}
 
 
 /*===== Sidebar =====*/
@@ -172,8 +175,34 @@ a:link, a:active, a:visited,
 	margin-top:4px;
 }
 
+/*===== Weird non-rounding on iOS. Redeclare. =====*/
+/*
+#searchform {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.tabber-navigation .current-tab a, 
+.tabber-navigation li a:hover, 
+.tabber-navigation li:hover {
+	-moz-border-radius:3px 3px 0 0;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-webkit-border-bottom-left-radius:0;
+	-webkit-border-bottom-right-radius:0;
+	border-radius:3px 3px 0 0;
+}
+.tabber-navigation {
+	-moz-border-radius:5px 5px 0 0;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-webkit-border-bottom-left-radius:0;
+	-webkit-border-bottom-right-radius:0;
+	border-radius:5px 5px 0 0;
+}
+*/
 
-/*===== Mobile =====*/
+/*===== Mobile (iPhone, Android) =====*/
 @media screen and ( max-device-width: 640px ) {
 
 #container {
@@ -274,5 +303,27 @@ a:link, a:active, a:visited,
 	width:90%;
 }
 
+
+} /* end @media screen and ( max-device-width: 640px ) */
+
+/*===== iPad Portrait =====*/
+@media screen and (min-device-width: 641px) and (max-device-width: 1024px) and (orientation:portrait) {
+
+#sidebar {
+	width:120px;
+}
+#main {
+	margin-right:150px;
+}
+#container {
+	width:auto;
+	margin:0 6px;
+}
+#searchform #s {
+	width:80px;
+}
+#searchform #searchsubmit {
+	margin-right:2px;
+}
 
 }
