@@ -52,7 +52,9 @@ body {
 	background-color:#f5f9fb;
 	color:#506F7E;
 }
-
+.show-all, .no-results, #message, .manager .updated p {
+	color:#555;
+}
 
 /* Links */
 #site-title a {
@@ -173,6 +175,27 @@ a:link, a:active, a:visited,
 }
 #searchform #searchsubmit {
 	margin-top:4px;
+}
+
+/*===== Notifications =====*/
+#sd-ticket-notify {
+	clear:both;
+	overflow:hidden;
+}
+#sd-ticket-notify span {
+	display:block;
+	margin:6px 0;
+}
+#sd-ticket-notify span label {
+	display:inline-block;
+	width:23%;
+	padding-right:1.9%;
+	vertical-align:top;
+	cursor:pointer;
+}
+
+#ticket-notify {
+	display:none;
 }
 
 /*===== Weird non-rounding on iOS. Redeclare. =====*/
@@ -303,6 +326,9 @@ a:link, a:active, a:visited,
 	width:90%;
 }
 
+#sd-ticket-notify span label {
+	width:48%;
+}
 
 } /* end @media screen and ( max-device-width: 640px ) */
 
