@@ -12,3 +12,14 @@ Some possible future features:
 
 * assign a ticket to someone
 * notifications via checking users rather than entering email addresses
+
+
+## Changelog
+
+### 0.1
+
+* Initial Release
+
+### 0.2
+
+* Add ability to set persistent notifications among blog authors
