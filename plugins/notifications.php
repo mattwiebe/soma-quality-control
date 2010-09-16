@@ -48,6 +48,7 @@ class SD_Ticket_Notify {
 			$comment = get_comment($comment_id);
 			$cbody = strip_tags($comment->comment_content);
 			$cauthor = $comment->comment_author;
+			$cemail = $comment->comment_author_email;
 		}
 		
 		$user_ids = get_post_meta($post_id, self::NOTIFY_META, true);
@@ -60,8 +61,17 @@ class SD_Ticket_Notify {
 			sprintf( "%s has created Ticket #%s ‘%s’: \n\n%s", get_the_author_meta('user_nicename', $post->post_author ), $post_id, $post->post_title, strip_tags($post->post_content) )
 		);
 
+		if ( 'comment' == $notification_type && $updates = get_comment_meta($comment_id, 'ticket_updates', true) ) {
+			$ups = "\n";
+			foreach ( $updates as $update ) {
+				$ups .= "\n * {$update}";
+			}
+			$messages['comment'] .= html_entity_decode( strip_tags($ups) );
+		}
 		
 		$msg = $messages[$notification_type] . "\n\n____\n\n" . sprintf( 'View this ticket: %s', get_permalink($post_id) );
+		
+		
 		
 		foreach ( $user_ids as $uid )
 			$to_arr[] = get_the_author_meta( 'user_email', $uid );
@@ -69,9 +79,9 @@ class SD_Ticket_Notify {
 		$to = implode(', ', $to_arr);
 		$subject = sprintf( '[%s] %s: %s', get_bloginfo('name'), $notification_nicename, $post->post_title );
 		
-		$reply_to = ( 'comment' == $notification_type ) ? $cauthor : get_the_author_meta('user_email', $post->post_author);
+		$reply_to = ( 'comment' == $notification_type ) ? $cemail : get_the_author_meta('user_email', $post->post_author);
 		$headers = "Reply-To: {$reply_to}\r\n";
-		
+
 		if ( wp_mail($to, $subject, $msg, $headers) ) {
 			$this->disable_default_notifications();
 		}
