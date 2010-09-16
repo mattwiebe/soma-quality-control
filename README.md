@@ -4,14 +4,16 @@ A child theme for Spencer Finnell’s [Quality Control](http://getqualitycontrol
 
 Other than having my logo, here’s what it currently does:
 
+* notifications via checking users rather than entering email addresses
 * automatically creates a sane set of States on activation (with appropriate default colours)
 * automatically creates an "Add Ticket" page on activation
 * makes the colour scheme high enough contrast to be readable
 
+
 Some possible future features:
 
 * assign a ticket to someone
-* notifications via checking users rather than entering email addresses
+* <del>notifications via checking users rather than entering email addresses</del>
 
 
 ## Changelog
